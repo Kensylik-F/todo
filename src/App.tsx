@@ -1,41 +1,22 @@
-import { useEffect, useState } from "react"
-import { fetchTodo } from "./api/Fetching"
-
-
-interface ITodo{
-	userId: number
-	id: number
-	title: string
-	completed: boolean
-}
-
+// import { TodoList } from "./components/TodoList/TodoList"
+// import './App.scss'
+import { Calendar } from './components/Calendar/Calendar'
+import { Header } from './components/header/header'
+import './components/style/app.scss'
+import './components/style/theme.scss'
 function App() {
   
-  const [todo, setTodo] = useState<ITodo[]>([])
-
-  useEffect(()=>{
-    const getTodo = async()=>{
-      try{
-        const data = await fetchTodo()
-        if(Array.isArray(data)){
-          setTodo(data)
-        }else {
-          console.error('Invalid seminar data format');
-        }
-      }catch(e){
-        console.error('Invalid seminar data format', e);
-
-      }
-    }
-    getTodo()
-  },[])
-
-
-  console.log(todo)
   return (
-    <>
-      
-    </>
+    <div className="app">
+		<div className="sidebar">
+		    <h1>Todo</h1>
+		</div>
+		<div className="main">
+			<Header/>
+			<Calendar/>
+			<main className='main-content'>main content</main>
+    	</div>
+	</div>
   )
 }
 

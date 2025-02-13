@@ -1,0 +1,61 @@
+
+
+body{
+	font-family: "Space Grotesk", serif;
+  	font-optical-sizing: auto;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	background: var(--background-color); 
+	color: var(--text-color);
+
+}
+
+.app {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	overflow: hidden; 
+
+	.sidebar {
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  width: 180px;
+	  height: 100%;
+	  background: transparent;
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  justify-content: center;
+  
+	  h1 {
+		font-weight: 900;
+		color: var(--primary-color);
+		font-size: 60px;
+		margin-bottom: 20px;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 20px;
+	  }
+
+	}
+  
+	.main {
+	  position: absolute;
+	  right: 0;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  width: 88%;
+	  height: 96vh;
+	  background: var(--secondary-color);
+	  overflow: hidden;
+	  border-top-left-radius: 40px;
+	  border-bottom-left-radius: 40px;
+	  display: flex;
+	  align-items: center;
+	//   justify-content: center;
+	  flex-direction: column;
+	  box-shadow: 0 0 15px 5px #002459;
+	}
+  }
+  

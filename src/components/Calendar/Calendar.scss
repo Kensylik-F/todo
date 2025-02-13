@@ -1,0 +1,64 @@
+.calendar-container {
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	width: 88%;
+	height: 100px;
+	overflow: hidden;
+}
+
+.calendar-wrapper {
+	border-radius: 10px;
+	overflow: hidden;
+	width: 100%;
+	overflow-x: auto;
+	scrollbar-width: none;
+
+	&::-webkit-scrollbar{
+		display: none;
+	}
+	
+  }
+  
+  .calendar-line {
+	height: 80px;
+	min-width: max-content;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	border-radius: 10px;
+	gap: 32px;
+	background: var(--secondary-color);
+	padding: 0 20px;
+  }
+
+  .day {
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); // Легкая тень
+	min-width: 70px;
+	height: 55px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	border-radius: 10px;
+	font-weight: bold;
+	transition: 0.3s;
+  }
+  
+  .past {
+	background: var(--btn-past);
+	color: var(--color-past);
+	
+  }
+  
+  .today {
+	background: var(--primary-color);
+	color: white;
+	box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+  }
+  
+  .future {
+	background: white;
+	color: black;
+  }

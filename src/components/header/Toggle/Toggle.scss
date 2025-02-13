@@ -1,0 +1,46 @@
+
+
+.toggle-btn {
+	position: relative;
+	width: 80px;
+	height: 38px;
+	border: none;
+	border-radius: 30px;
+	background-color: #ccc;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	padding: 0;
+	overflow: hidden;
+	transition: background-color 0.3s ease;
+
+	
+	&.light {
+	  background-color: #f0f0f0;
+	}
+  
+	&.dark {
+	  background-color: #333;
+	}
+  
+	.emoji {
+	  display: inline-block;
+	  text-align: center;
+	  font-size: 30px;
+	  position: absolute;
+	  left: 0px;
+	  transition: transform 0.5s ease, left 0.5s ease, color 0.5s ease;
+	}
+  
+	&.light .emoji {
+	  transform: rotate(0deg);
+	  left: 0px;
+	  color: #ffd700; // Цвет для солнца
+	}
+  
+	&.dark .emoji {
+	  transform: rotate(360deg);
+	  left: calc(100% - 40px);
+	  color: #ffffff; // Цвет для луны
+	}
+  }

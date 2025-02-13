@@ -1,0 +1,17 @@
+:root {
+	--background-color: #0047ab;
+	--text-color: #000000;
+	--primary-color: #007bff;
+	--secondary-color: #cbd0d4;
+	--btn-past:  #a7a7a7;
+	--color-past: #414141;
+  }
+  
+  [data-theme="dark"] {
+	--background-color: #1a1a1a;
+	--text-color: #ffffff;
+	--primary-color: #0d6efd;
+	--secondary-color: #69879d;
+	--btn-past: #465b77;
+	--color-past: #c7c8cc;
+  }
